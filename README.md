@@ -1,4 +1,3 @@
-# to-do-list-application
+# to-do-calender web application
 
-I build this to-do list application with pure javascript, no jQuery.  
-I also used Twitter bootstra to change the style, add button icons, so the application looks more professional
+I built this application using google calender, Angular JS and Bootstrap
