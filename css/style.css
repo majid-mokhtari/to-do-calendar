@@ -1,0 +1,110 @@
+
+/*
+==============================================
+APPS header and general
+==============================================
+*/
+
+.row.app{
+	margin-bottom: 300px;
+}
+.appsName{
+	color: darkgreen;
+}
+.appsDescription{
+	padding-bottom: 20px;
+	border-bottom: 2px solid grey;
+}
+.appsQuestion{
+	padding-top: 30px;
+	padding-bottom: 20px;
+}
+.instruction{
+	padding-bottom: 40px;
+	color: darkred;
+}
+input[type="text"]:focus, input[type="number"]:focus {
+  font-size: 1.3em;
+}
+.githubImg{
+	width: 60px;
+	margin-left: 10px;
+}
+.githubImg:hover{
+	background-color: rgb(80, 156, 181);
+	border-radius: 100%;
+}
+.goUp{
+	width: 60px;
+	padding: 2px;
+	margin-right: 15px;
+	border-radius: 100%;
+}
+.goUp:hover{
+	background-color: rgb(80, 156, 181);
+	cursor: pointer;
+}
+.squars{
+	width:75%;
+    height: 100px;
+    margin-left: 22%;
+    margin-bottom: 205px;
+    margin-top: 100px;
+    
+}
+.squars li{
+	width: 125px;
+	height: 125px;
+	margin-left: 5px;
+	margin-top: 5px;
+	float: left;
+	list-style: none;
+	cursor: pointer;
+	text-align: center;
+	box-shadow: .5px .5px 10px 1px grey;
+	border-radius: 10px;
+}
+.squars li:nth-child(1){
+	background-color: rgb(194, 70, 70);
+}
+.squars li:nth-child(2){
+	background-color: rgb(237, 157, 12);
+	
+}
+.squars li:nth-child(3){
+	background-color: rgb(63, 171, 150)
+}
+.squars li:nth-child(4){
+	background-color: rgb(34, 152, 213)
+	
+}
+.appIcon{
+	width: 70px;
+	margin-top: 25px;
+}
+
+
+
+/*
+==============================================
+To-Do application
+==============================================
+*/
+
+#new-task{
+	margin-right:15px;
+	height: 35px;
+	width: 320px;
+	border: 2px solid grey;
+	margin-bottom: 10px;
+}
+
+.edited label:after {
+	content: " Edited";
+	color: #a7b9c4;
+}
+
+.completed label{
+	text-decoration: line-through;
+ 	color: #a7b9c4;
+}

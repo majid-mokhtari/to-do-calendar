@@ -1,0 +1,46 @@
+<div style="width:70%; margin: 0 auto;">
+      <form name="myForm" class="text-center" style="border-bottom: 1px solid black;">
+           <label for="new-task"><h3>Add Item</h3></label>
+           <p>
+            <input ng-model="newTask" id="new-task" type="text"  placeholder=" Item is neccessary" required>
+            <button ng-click="addTodo()" class="btn btn-success" ng-disabled="myForm.$invalid">
+                <span class="glyphicon glyphicon-plus"> Add</span>
+            </button>
+            <button ng-click="showTodos(); import=!import" class="btn btn-success" ng-disabled="import">
+                <span class="glyphicon glyphicon-calendar"> Import</span>
+            </button>
+           </p>   
+      </form>
+      <h3 class="text-center">Todo</h3>
+      <div ng-repeat="todo in todos | orderBy: 'completed'" ng-class="{'edited': todo.edited, 'completed': todo.completed}" ng-init="todo.completed = false" class="col-sm-12" style="border-top: 1px dashed black;">
+          <input ng-model="todo.completed" type="checkbox" style="margin-top: 10px;" />
+          <label ng-hide="editing" style="margin-top: 10px;">{{todo.name }}</label>
+          <input ng-change="todo.edited = true" ng-blur="editing=false" ng-show="editing" ng-model="todo.name" class="editing-label" type="text" style="margin-top: 10px;"/> 
+
+          <button ng-click="deleteTodo(todo)" class="btn btn-danger pull-right" style="margin: 10px;"><span class="glyphicon glyphicon-trash"></span></button></li>
+          <button ng-click="saveTodo(todo)" class="btn btn-primary pull-right" style="margin: 10px;" ><span class="glyphicon glyphicon-save"></span></button></li>  
+          <button ng-click="editing=!editing" class="edit btn btn-success pull-right" style="margin: 10px;" ><span class="glyphicon glyphicon-pencil"></span></button>
+      </div>
+
+           <!-- Modal -->
+      <div class="modal fade" id="memberModal" tabindex="-1" role="dialog" aria-labelledby="memberModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                      </button>
+                       <h4 class="modal-title" id="memberModalLabel">Hello!</h4>
+
+                  </div>
+                  <div class="modal-body">
+                      <p>You need to authorize access to Google Calendar API if you want to use my awesome web application.<br><br>
+                      Do you wish to continue?</p>
+                  </div>
+                  <div class="modal-footer">
+                      <button type="button" class="btn btn-primary" data-dismiss="modal">No</button>
+                      <button type="button" class="btn btn-primary" data-dismiss="modal" ng-click="getCalenderItems()">Yes</button>
+                  </div>
+              </div>
+          </div>
+      </div>
+</div>
