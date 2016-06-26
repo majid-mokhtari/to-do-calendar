@@ -49,7 +49,7 @@ app.controller('mainCtrl', ["$scope", "dataService", "$filter", function ($scope
         _.map($scope.todos, function(item, index){
             if (item && item.name === todo.name){
                 $scope.todos.splice(index, 1);
-            }
+            };
         });
 
         //delete todo/event from google calender
